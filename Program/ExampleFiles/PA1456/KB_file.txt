@@ -1,0 +1,68 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+using System.IO;
+
+public class Size : MonoBehaviour
+{
+
+    int y = 1;
+    int x = 1;
+    int z = 1;
+
+    //Start is called before the first frame update
+    void Start()
+    {
+        //y = size / 8*100; Byte
+        //void ScaDirectory();
+
+        string path = Directory.GetCurrentDirectory();
+        /*
+        FileInfo[] Files = d.GetFiles("*.txt"); //Getting Text files
+        string str = "";
+        foreach (FileInfo file in Files)
+        {
+            str = str + ", " + file.Name;
+        }
+        */
+        FileInfo[] Files = path.GetFiles("*.txt"); //Getting Text files
+        foreach (FileInfo file in Files)
+        {
+            y = FileInfo.Length/ 8000;  // TYPECAST FOR INT 
+            if (y < 1)
+            {
+                y = 1;
+            }
+            transform.localScale = new Vector3(x, y, z);
+
+        }
+
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (Input.GetMouseButton(0))
+        {
+            y += 1;
+            transform.localScale = new Vector3(x,y,z);
+        }
+
+    }
+
+}
+
+/*
+  DirectoryInfo d = new DirectoryInfo(@"C:\PA1456");//Assuming Test is your Folder
+FileInfo[] Files = d.GetFiles("*.txt"); //Getting Text files
+string str = "";
+foreach(FileInfo file in Files )
+{
+  str = str + ", " + file.Name;
+}
+*/
+
+

@@ -1,0 +1,21 @@
+Needed:
+All files saved in C:\PA1456 as.txt files
+
+
+Start the program:
+Download the program
+Create a folder named 'PA1456' in directory'C:\' 
+Save all the files as .txt in the folder
+Turn on your vr headset and start the program 'VR project.exe'
+Move around the black floors with your right thumbstick and inspect the size of your files
+The program will sort the files alphabetically
+
+Colors and meaning:
+To get the file size watch the base*height
+Light blue: size in KB
+Dark blue: size in MB
+Purple: size in GB
+
+If you want to try out the program there is a map called "ExampleFiles"
+Copy the content of that folder into your 'c:\' directory to try the project
+
